@@ -21,8 +21,9 @@ jobs:
     steps:
     - uses: actions/checkout@v2
 
-    - name: Run tests
-      run: cd hello-world && npm install && npm test
+    - run: cd hello-world
+    - run: npm install
+    - run: npm test
 
     - name: sam build
       uses: tkt-actions/aws-sam-cli@v1
